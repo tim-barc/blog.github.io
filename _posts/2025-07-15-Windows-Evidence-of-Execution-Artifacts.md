@@ -11,7 +11,7 @@ This report explores the following artifacts:
  SRUM
 For a complete list of available evidence of execution artifacts, check out this post by Adam Harrison. 
 
-## ***Prefetch***
+## __Prefetch__
 ### Location: %SystemRoot$\Prefetch
 
 Windows Prefetch files were introduced in Windows XP; they were designed to speed up the application startup process by preloading a snippet of code in commonly used programs. Prefetch files contain:
