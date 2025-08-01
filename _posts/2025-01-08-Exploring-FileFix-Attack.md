@@ -11,7 +11,7 @@ ClickFix is a type of social engineering attack whereby users are prompted to ex
 
 <img width="602" height="314" alt="Image" src="https://github.com/user-attachments/assets/af37be64-a132-4f08-80f6-8473ff283ca2" />
 
-**Figure 1 ClickFix Example**
+*Figure 1 ClickFix Example*
 
 I recommend exploring this [post](https://www.proofpoint.com/au/blog/threat-insight/security-brief-clickfix-social-engineering-technique-floods-threat-landscape) by proofpoint, which explains the ClickFix attack in more detail. If you go through this post, you can determine that this technique is used by several different threat actors, and has been observed to deploy AsyncRAT, Danabot, DarkGate, Lumma Stealer, NetSupport and more. I have personally observed this technique being used to deploy Lumma Stealer on multiple occasions, being extremely effective.
 
@@ -25,13 +25,13 @@ Within the post by mrd0x is some basic source code that can be used to demonstra
 
 <img width="602" height="574" alt="Image" src="https://github.com/user-attachments/assets/0e899b92-3356-4df2-b5aa-275befe29881" />
 
-**Figure 2 ClickFix Demo**
+*Figure 2 ClickFix Demo*
 
 In my opinion, this is a relatively professional looking page, and it could certainly trick unsuspecting users into executing malicious commands. The attack chain is simple; the user copies the “file path” and pastes that into the file explorer address bar:
 
 <img width="481" height="82" alt="Image" src="https://github.com/user-attachments/assets/cc9cebce-e4f9-4b8b-94a4-d9a78ccf4abe" />
 
-**Figure 3 File Explorer Address Bar**
+*Figure 3 File Explorer Address Bar*
 
 As you can see in Figure 3, you are essentially unable to see the malicious command unless you move over to the left. The command in this case is as follows:
 
@@ -44,7 +44,7 @@ Everything after the `#` is treated as a comment, therefore, only the PowerShell
 
 <img width="292" height="65" alt="Image" src="https://github.com/user-attachments/assets/3b2fb61b-1f63-4d16-a71a-7f6388284db9" />
 
-**Figure 4 Windows Defender FileFix Detection**
+*Figure 4 Windows Defender FileFix Detection*
 
 <br>
 
@@ -60,7 +60,7 @@ In this instance, I am using a tool called Registry Explorer by Eric Zimmerman t
 
 <img width="602" height="153" alt="Image" src="https://github.com/user-attachments/assets/41b754a0-d4e6-4970-a791-dde370984cc9" />
 
-**Figure 5 Registry Explorer TypedPaths Key**
+*Figure 5 Registry Explorer TypedPaths Key*
 
 Aside from the TypedPaths key, you can also use a variety of artifacts such as exploring a user’s browsing history to try and find the source hosting the FileFix attack, using something like the Wayback Machine if the site is taken down or offline. 
 
