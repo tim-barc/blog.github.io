@@ -8,6 +8,7 @@ I would first like to acknowledge that most of this information comes from an in
 
 ClickFix is a type of social engineering attack whereby users are prompted to execute malicious code through the Run Dialog, all under the guise of performing a captcha (see Figure 1). 
 <img width="602" height="314" alt="Image" src="https://github.com/user-attachments/assets/af37be64-a132-4f08-80f6-8473ff283ca2" />
+
 **Figure 1 ClickFix Example**
 
 I recommend exploring this post by proofpoint, which explains the ClickFix attack in more detail. If you go through this post, you can determine that this technique is used by several different threat actors, and has been observed to deploy AsyncRAT, Danabot, DarkGate, Lumma Stealer, NetSupport and more. I have personally observed this technique being used to deploy Lumma Stealer on multiple occasions, being extremely effective.
