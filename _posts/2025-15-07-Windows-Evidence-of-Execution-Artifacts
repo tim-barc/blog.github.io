@@ -1,0 +1,58 @@
+# Windows Evidence of Execution Artifacts 
+
+Evidence of execution artifacts are forensic indicators that a program was run on a system. They are essential for incident responders and digital forensics investigators, offering insights into what was executed and when. 
+This report explores the following artifacts:
+- Prefetch
+- Shimcache/AppCompatCache
+- AmCache
+- Program Compatibility Assistant (PCA)
+- MUICache
+- UserAssist 
+ SRUM
+For a complete list of available evidence of execution artifacts, check out this post by Adam Harrison. 
+
+## Prefetch
+### Location: %SystemRoot$\Prefetch
+
+Windows Prefetch files were introduced in Windows XP; they were designed to speed up the application startup process by preloading a snippet of code in commonly used programs. Prefetch files contain:
+- Name of the executable
+- A list of DLLs used by that executable
+- Count of how many times the executable was run
+- Timestamp indicating the last 8 times the program was executed (Windows 8+). 
+
+### Parsing Tool: PECmd
+
+To parse prefetch files, we can use a tool called Prefetch Explorer Command Line (PECmd), a fantastic tool created by Eric Zimmerman. To parse an entire directory, you can use the following syntax:
+
+```powershell
+PECmd.exe -d "C:\Windows\Prefetch" --csv . --csvf prefetch_out.csv
+```
+
+Where -d ensures it recursively parses each prefetch file within the given directory, --csv . specifies to save the csv file to the current directory and --csvf specifies the filename to save the CSV formatted results to. 
+To parse a single prefetch file, you can use the following syntax:
+
+```powershell
+PECmd.exe -f "C:\Windows\Prefetch\<prefetch_file>" --csv . --csvf prefetch_out.csv
+```
+
+The syntax is the same, except for the -f switch with specifies the prefetch file you want to parse. 
+
+To analyse the output, I recommend using a tool called Timeline Explorer. This is another one of Eric Zimmerman’s tools that is more suited for forensics than Excel when it comes to CSV files. 
+
+<img width="602" height="37" alt="Image" src="https://github.com/user-attachments/assets/ca58a8bf-c96c-4e95-8c1a-dbedd7253db5" />
+<img width="602" height="38" alt="Image" src="https://github.com/user-attachments/assets/bce5054b-36db-4c08-8ac0-5a28ae95aadb" />
+
+### Limitations:
+
+- Limited to 1024 files on Windows 8+ systems
+- Will not identify the user that executed the application
+- Requires tools to interpret data
+- Can be deleted by a threat actor
+
+### Resources:
+- https://forensics.wiki/prefetch/
+- https://youtu.be/f4RAtR_3zcs?si=XgOMKKvivT48IQeI
+- https://www.thedfirspot.com/post/artifacts-of-execution-i-know-what-you-did-last-incident
+- https://isc.sans.edu/diary/29168
+
+
