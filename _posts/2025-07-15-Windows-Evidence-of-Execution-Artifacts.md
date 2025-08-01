@@ -11,8 +11,8 @@ This report explores the following artifacts:
  SRUM
 For a complete list of available evidence of execution artifacts, check out this post by Adam Harrison. 
 
-## Prefetch
-### Location: %SystemRoot$\Prefetch
+### Prefetch
+#### Location: %SystemRoot$\Prefetch
 
 Windows Prefetch files were introduced in Windows XP; they were designed to speed up the application startup process by preloading a snippet of code in commonly used programs. Prefetch files contain:
 - Name of the executable
@@ -20,7 +20,7 @@ Windows Prefetch files were introduced in Windows XP; they were designed to spee
 - Count of how many times the executable was run
 - Timestamp indicating the last 8 times the program was executed (Windows 8+). 
 
-### Parsing Tool: PECmd
+#### Parsing Tool: PECmd
 
 To parse prefetch files, we can use a tool called Prefetch Explorer Command Line (PECmd), a fantastic tool created by Eric Zimmerman. To parse an entire directory, you can use the following syntax:
 
@@ -42,14 +42,14 @@ To analyse the output, I recommend using a tool called Timeline Explorer. This i
 <img width="602" height="37" alt="Image" src="https://github.com/user-attachments/assets/ca58a8bf-c96c-4e95-8c1a-dbedd7253db5" />
 <img width="602" height="38" alt="Image" src="https://github.com/user-attachments/assets/bce5054b-36db-4c08-8ac0-5a28ae95aadb" />
 
-### Limitations:
+#### Limitations:
 
 - Limited to 1024 files on Windows 8+ systems
 - Will not identify the user that executed the application
 - Requires tools to interpret data
 - Can be deleted by a threat actor
 
-### Resources:
+#### Resources:
 - https://forensics.wiki/prefetch/
 - https://youtu.be/f4RAtR_3zcs?si=XgOMKKvivT48IQeI
 - https://www.thedfirspot.com/post/artifacts-of-execution-i-know-what-you-did-last-incident
@@ -57,15 +57,15 @@ To analyse the output, I recommend using a tool called Timeline Explorer. This i
 
 <br>
 
-## Shimcache/AppCompatCache
-### Location: SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache
+### Shimcache/AppCompatCache
+#### Location: SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache
 
 The purpose of ShimCache, also known as AppCompatCache, is to provide compatibility for old applications. If there is a compatibility issue, ShimCache will attempt to shim the application, modifying the file’s properties to try and make it run on the current system. It logs:
 - Executable file name
 - File path
 - Last modification date and time. 
 
-### Parsing Tool: AppCompatCacheParser
+#### Parsing Tool: AppCompatCacheParser
 
 To parse the ShimCache, you can use a tool called AppCompatCacheParser, another one of Eric Zimmerman’s tools. The syntax is as follows:
 
@@ -77,12 +77,12 @@ Where -f specifies the path to the clean SOFTWARE hive, --csv specifies the outp
 
 <img width="602" height="141" alt="Image" src="https://github.com/user-attachments/assets/ab23bf02-61ec-4b28-a5e2-d569c946520e" />
 
-### Limitations:
+#### Limitations:
 
 - For Windows 10+ systems, Shimcache cannot be used to prove program execution. 
 - Timestamps are not always accurate, which can cause the timeline timestamps to be out of order. 
 
-### Resources:
+#### Resources:
 
 - https://forensafe.com/blogs/shimcache.html
 - https://www.thedfirspot.com/post/evidence-of-program-existence-shimcache
@@ -92,8 +92,8 @@ Where -f specifies the path to the clean SOFTWARE hive, --csv specifies the outp
 
 <br>
 
-## AmCache
-### Location: %SystemRoot%\appcompat\Programs\Amcache.hve
+### AmCache
+#### Location: %SystemRoot%\appcompat\Programs\Amcache.hve
 
 The AmCache stores metadata about program installation and execution on Windows 7+ systems for Windows Application Compatibility. Like the ShimCache, the AmCache can be used to prove that a file existed on a system but cannot reliably prove execution of a program. Key fields include:
 - Full file path
@@ -103,7 +103,7 @@ The AmCache stores metadata about program installation and execution on Windows 
 - SHA1 hash
 - Compilation time (sometimes), and more.
 
-### Parsing Tool: AmcacheParser
+#### Parsing Tool: AmcacheParser
 
 We can use a tool called AmcacheParser to parse the AmCache hive:
 
@@ -120,14 +120,14 @@ You can view these files in Timeline Explorer:
 <img width="602" height="65" alt="Image" src="https://github.com/user-attachments/assets/1e230ec8-2195-4d97-acd4-b050d2d9d56b" />
 <img width="602" height="83" alt="Image" src="https://github.com/user-attachments/assets/b870eae7-2b35-4462-a167-c9df0cadafe9" />
 
-### Limitations:
+#### Limitations:
 
 - Should not be used for proof of execution, rather, it should be used to prove the existence of an executable. 
 - Requires tools to interpret data.
 - Entries within the AmCache can be updated by automated tasks and scanning conducted by the OS, therefore, it isn’t reliable for proving execution of a program.  
 
 
-### Resources:
+#### Resources:
 
 - https://forensics.wiki/amcache/
 - https://artifacts-kb.readthedocs.io/en/latest/sources/windows/AMCache.html
@@ -136,8 +136,8 @@ You can view these files in Timeline Explorer:
 
 <br>
 
-## Program Compatibility Assistant (PCA)
-### Location: %SystemRoot%\appcompat\pca
+### Program Compatibility Assistant (PCA)
+#### Location: %SystemRoot%\appcompat\pca
 
 PCA (Program Compatibility Assistant) is a newly discovered evidence of execution artifact for Windows 11 Pro systems. Within the given path are three files: 
 - PcaAppLaunchDic.txt
@@ -159,31 +159,31 @@ PcaGeneralDb0.txt provides information including:
 
 You can use the following [tool](https://github.com/AndrewRathbun/PCAParser) to parse the PCA.
 
-### Resources:
+#### Resources:
 
 - https://aboutdfir.com/new-windows-11-pro-22h2-evidence-of-execution-artifact/
 - https://www.sygnia.co/blog/new-windows-11-pca-artifact/
 
 <br>
 
-## MUICache
-### Location: USRCLASS.DAT\Local Settings\Software\Microsoft\Shell\MuiCache
+### MUICache
+#### Location: USRCLASS.DAT\Local Settings\Software\Microsoft\Shell\MuiCache
 
 MUI (Multilingual User Interface) enables the Windows OS to have a single application localised for multiple languages. Developers create a .MUI file for each language supported by the application, enabling users to switch the language. The MUI files generate a MUICache key in the registry, which contains information about the files that are executed. Programs executed via Explorer result in MUICache entries being created. 
 
-### Tools: Registry Explorer
+#### Tools: Registry Explorer
 
 You can easily view this artifact using a tool like Registry Explorer:
 
 <img width="602" height="198" alt="Image" src="https://github.com/user-attachments/assets/b648ce80-d1fd-4e46-8b07-b336ee158136" />
 
-### Limitations:
+#### Limitations:
 
 - Does not pinpoint the precise time a program was executed. It can only indicate that a program was launched at some point. 
 - MUICache entries can be modified or deleted.
 
 
-### Resources:
+#### Resources:
 
 - https://www.youtube.com/watch?v=ea2nvxN878s&t=104s
 - https://www.magnetforensics.com/blog/forensic-analysis-of-muicache-files-in-windows/
@@ -191,8 +191,8 @@ You can easily view this artifact using a tool like Registry Explorer:
 
 <br>
 
-## UserAssist 
-### Location: NTUSER.dat\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist
+### UserAssist 
+#### Location: NTUSER.dat\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist
 
 The UserAssist artifact displays a table of GUI programs executed on a Windows machine. The artifact stores various information about every GUI application that is executed, including:
 - Program name
@@ -202,7 +202,7 @@ The UserAssist artifact displays a table of GUI programs executed on a Windows m
 - Last execution time. 
 
 
-### Tools: Registry Explorer
+#### Tools: Registry Explorer
 
 Within the UserAssist key are several subkeys, the ones of interest are:
 - {CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}: Executed EXE files.
@@ -211,11 +211,11 @@ Each subkey contains a Count subkey, which is where the information regarding ex
 
 <img width="562" height="147" alt="Image" src="https://github.com/user-attachments/assets/e7744c14-0fac-4ff2-ba5b-cb21b08e9ea6" />
 
-### Limitations:
+#### Limitations:
 
 - Inconsistent data. 
 
-### Resources:
+#### Resources:
 
 - https://blog.didierstevens.com/programs/userassist/
 - https://securelist.com/userassist-artifact-forensic-value-for-incident-response/116911/
@@ -223,8 +223,8 @@ Each subkey contains a Count subkey, which is where the information regarding ex
 
 <br>
 
-## SRUM
-### Location: %SystemRoot%\System32\sru\SRUDB.dat
+### SRUM
+#### Location: %SystemRoot%\System32\sru\SRUDB.dat
 
 SRUM (System Resource Utilisation Monitor) is a feature of Windows 8+ systems that tracks data including:
 - Application usage
@@ -232,7 +232,7 @@ SRUM (System Resource Utilisation Monitor) is a feature of Windows 8+ systems th
 - System energy. 
 SRUM Network Usage can be extremely helpful when identifying data exfiltration, as it records bandwidth usage in bytes sent and received by an application. 
 
-### Parsing Tool:
+#### Parsing Tool:
 
 We can use a tool called SrumECmd to parse the SRUM:
 
@@ -249,7 +249,7 @@ You can then view the output in timeline explorer. For example, let’s look at 
 <img width="602" height="226" alt="Image" src="https://github.com/user-attachments/assets/ce455ee0-ffba-4789-aaab-8aa9042bc12f" />
 <img width="602" height="157" alt="Image" src="https://github.com/user-attachments/assets/cb589dcc-7071-4ad7-bf64-fe9620c0eb89" />
 
-### Resources:
+#### Resources:
 
 - https://www.magnetforensics.com/blog/srum-forensic-analysis-of-windows-system-resource-utilization-monitor/
 - https://youtu.be/Uw8n4_o-ETM?si=tPfuJhKphzDoeVRj
