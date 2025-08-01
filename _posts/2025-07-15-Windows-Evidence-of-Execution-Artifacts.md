@@ -11,7 +11,7 @@ This report explores the following artifacts:
  SRUM
 For a complete list of available evidence of execution artifacts, check out this post by Adam Harrison. 
 
-### Prefetch
+### **Prefetch**
 #### Location: %SystemRoot$\Prefetch
 
 Windows Prefetch files were introduced in Windows XP; they were designed to speed up the application startup process by preloading a snippet of code in commonly used programs. Prefetch files contain:
@@ -57,7 +57,7 @@ To analyse the output, I recommend using a tool called Timeline Explorer. This i
 
 <br>
 
-### Shimcache/AppCompatCache
+### **Shimcache/AppCompatCache**
 #### Location: SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache
 
 The purpose of ShimCache, also known as AppCompatCache, is to provide compatibility for old applications. If there is a compatibility issue, ShimCache will attempt to shim the application, modifying the file’s properties to try and make it run on the current system. It logs:
@@ -92,7 +92,7 @@ Where -f specifies the path to the clean SOFTWARE hive, --csv specifies the outp
 
 <br>
 
-### AmCache
+### **AmCache**
 #### Location: %SystemRoot%\appcompat\Programs\Amcache.hve
 
 The AmCache stores metadata about program installation and execution on Windows 7+ systems for Windows Application Compatibility. Like the ShimCache, the AmCache can be used to prove that a file existed on a system but cannot reliably prove execution of a program. Key fields include:
@@ -136,7 +136,7 @@ You can view these files in Timeline Explorer:
 
 <br>
 
-### Program Compatibility Assistant (PCA)
+### **Program Compatibility Assistant (PCA)**
 #### Location: %SystemRoot%\appcompat\pca
 
 PCA (Program Compatibility Assistant) is a newly discovered evidence of execution artifact for Windows 11 Pro systems. Within the given path are three files: 
@@ -166,7 +166,7 @@ You can use the following [tool](https://github.com/AndrewRathbun/PCAParser) to 
 
 <br>
 
-### MUICache
+### **MUICache**
 #### Location: USRCLASS.DAT\Local Settings\Software\Microsoft\Shell\MuiCache
 
 MUI (Multilingual User Interface) enables the Windows OS to have a single application localised for multiple languages. Developers create a .MUI file for each language supported by the application, enabling users to switch the language. The MUI files generate a MUICache key in the registry, which contains information about the files that are executed. Programs executed via Explorer result in MUICache entries being created. 
@@ -191,7 +191,7 @@ You can easily view this artifact using a tool like Registry Explorer:
 
 <br>
 
-### UserAssist 
+### **UserAssist**
 #### Location: NTUSER.dat\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist
 
 The UserAssist artifact displays a table of GUI programs executed on a Windows machine. The artifact stores various information about every GUI application that is executed, including:
@@ -223,7 +223,7 @@ Each subkey contains a Count subkey, which is where the information regarding ex
 
 <br>
 
-### SRUM
+### **SRUM**
 #### Location: %SystemRoot%\System32\sru\SRUDB.dat
 
 SRUM (System Resource Utilisation Monitor) is a feature of Windows 8+ systems that tracks data including:
