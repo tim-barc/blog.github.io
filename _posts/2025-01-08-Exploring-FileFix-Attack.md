@@ -4,7 +4,7 @@ I would first like to acknowledge that most of this information comes from an in
 
 <br>
 
-## Context: From ClickFix to FileFix
+### Context: From ClickFix to FileFix
 
 ClickFix is a type of social engineering attack whereby users are prompted to execute malicious code through the Run Dialog, all under the guise of performing a captcha (see Figure 1). 
 
@@ -19,7 +19,7 @@ Whilst ClickFix is extremely effective, persuading users to execute weird lookin
 
 <br>
 
-## FileFix in Practice
+### FileFix in Practice
 
 Within the post by mrd0x is some basic source code that can be used to demonstrate a FileFix attack. If you save that code as a HTML file and open it with a browser, you are presented with the following page:
 
@@ -48,7 +48,7 @@ Everything after the `#` is treated as a comment, therefore, only the PowerShell
 
 <br>
 
-## FileFix Artifacts
+### FileFix Artifacts
 
 A very simple artifact that we can use to investigate FileFix attacks is called TypedPaths. TypedPaths store what paths or commands a user has entered into the Run dialogue or File Explorer address bar. The TypedPaths key is located in the NTUSER.dat hive, and can be found at:
 
@@ -66,6 +66,6 @@ Aside from the TypedPaths key, you can also use a variety of artifacts such as e
 
 <br>
 
-## Conclusion
+### Conclusion
 
 The FileFix attack is increasingly observed in the [wild](https://thedfirreport.com/2025/07/14/kongtuke-filefix-leads-to-new-interlock-rat-variant/) and offers threat actors a more convincing method than ClickFix. Both methods are easy to detect, and forensic artifacts such as the RunMRU and TypedPaths can be used to investigate both ClickFix and FileFix attacks respectively.
