@@ -1,6 +1,6 @@
-title: "My Blogs Name"
-author: "Default Author Name"
-description: "Some short description of your blog can go here." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+title: "Tim’s Blog of Evidence"
+author: "Tim Barclay"
+description: "Welcome to my cybersecurity blog, where I dive into all things blue team. From digital forensics to bad USBs, this is my space to explore, document, and share insights. Whether you're here to learn, find resources, or follow along with my latest discoveries, you'll find practical breakdowns and in-depth analysis covering real-world security topics. Join me as I uncover new threats, techniques, and tools, and document my journey through the ever-changing landscape of cybersecurity." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 
 # Email / Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
