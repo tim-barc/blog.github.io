@@ -79,4 +79,5 @@ This post covers only a snippet of DeepBlueCLI’s potential. It can also detect
 - https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/deepbluecli/DeepBlueCLI.md
 - https://github.com/sans-blue-team/DeepBlueCLI
 - https://youtu.be/6sMluvfLsI8?si=aFnkEGmQIcoZ_e_P
+  
 I hope you enjoyed this post. DeepBlueCLI is an incredibly fun tool to use and I highly recommend it for those who struggle with analysing event logs using the Event Viewer or PowerShell cmdlets. 
