@@ -19,7 +19,7 @@ Whilst ClickFix is extremely effective, persuading users to execute weird lookin
 
 <br>
 
-### FileFix in Practice
+### **FileFix in Practice**
 
 Within the post by mrd0x is some basic source code that can be used to demonstrate a FileFix attack. If you save that code as a HTML file and open it with a browser, you are presented with the following page:
 
@@ -48,7 +48,7 @@ Everything after the `#` is treated as a comment, therefore, only the PowerShell
 
 <br>
 
-### FileFix Artifacts
+### **FileFix Artifacts**
 
 A very simple artifact that we can use to investigate FileFix attacks is called TypedPaths. TypedPaths store what paths or commands a user has entered into the Run dialogue or File Explorer address bar. The TypedPaths key is located in the NTUSER.dat hive, and can be found at:
 
