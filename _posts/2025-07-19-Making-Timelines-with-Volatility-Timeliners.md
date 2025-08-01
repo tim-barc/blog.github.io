@@ -11,29 +11,29 @@ Volatility is a powerful memory forensics framework used to extract artifacts fr
 Timelines provide essential context in forensic investigations. Rather than viewing events in isolation, you can correlate file access, process launches, and network activity to better understand a system’s state over time. This is especially useful when tracking a threat actor’s movements on a compromised machine. 
 The importance of a timeline can be better understood through exploring the acronym P2FUST (Protocols/Network, Processes, Files, Users, Systems, Times). This acronym was created by Adam Johnston and explained in a blog post on [DFIR MADNESS](https://dfirmadness.com/p2fust-adding-context-to-declare-bad/). The idea surrounding this acronym is to enable you to better understand the context around an event, ultimately being able to determine if an event is a true or false positive. As explained in the post, “the basis of P2FUST is when you come across an event, you take the surrounding information to add context. This helps to decide if an event is a true positive or just a waste of time.” The surrounding evidence in this case, can be easily found using a timeline. Take for example you noticed excel contacting an external HTTP server (example given in the blog post)
 
-[P]rotocols/Network:
+[**P**]rotocols/Network:
 
 *HTTP/DST 145.23.25.16 SRC: 10.0.2.250:21*
 
-[P]rocesses:
+[**P**]rocesses:
 
 *excel.exe launched with command line, “c:\program files\microsoft office\root\office16\excel.exe” “c:\users\%user%\AppData\Local\Microsoft\Windows\NetCache\Content.Outlook\IH3E40\InvoicePayment.xlsx”
 Child process – regsvr32.exe -s “c: \users\%user%\downloads\reputation.gpx”*
 
-[F]iles:
+[**F**]iles:
 
 *C:\users\%user%\AppData\Local\Microsoft\Windows\NetCache\Content.Outlook\IH3E40\InvoicePayment.xlsx
 c: \users\%user%\downloads\reputation.gpx*
 
-[U]sers:
+[**U**]sers:
 
-*John Doe (Role: Accountant)*
+*John Doe (Role: Accountant)* 
 
-[S]ystems:
+[**S**]ystems:
 
-*WIN10-WORKSTATION*
+*WIN10-WORKSTATION* 
 
-[T]imes:
+[**T**]imes:
 
 *16:07UTC*
 
