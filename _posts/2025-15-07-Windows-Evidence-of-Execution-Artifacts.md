@@ -55,4 +55,39 @@ To analyse the output, I recommend using a tool called Timeline Explorer. This i
 - https://www.thedfirspot.com/post/artifacts-of-execution-i-know-what-you-did-last-incident
 - https://isc.sans.edu/diary/29168
 
+<br>
 
+## Shimcache/AppCompatCache
+### Location: SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache
+
+The purpose of ShimCache, also known as AppCompatCache, is to provide compatibility for old applications. If there is a compatibility issue, ShimCache will attempt to shim the application, modifying the file’s properties to try and make it run on the current system. It logs:
+- Executable file name
+- File path
+- Last modification date and time. 
+
+### Parsing Tool: AppCompatCacheParser
+
+To parse the ShimCache, you can use a tool called AppCompatCacheParser, another one of Eric Zimmerman’s tools. The syntax is as follows:
+
+```powershell
+AppCompatCacheParser.exe -f “<software_hive>” --csv . --csvf shimcache_out.csv
+```
+
+Where -f specifies the path to the clean SOFTWARE hive, --csv specifies the output directory, and --csvf specifies the output filename. You can analyse the output using Timeline Explorer:
+
+<img width="602" height="141" alt="Image" src="https://github.com/user-attachments/assets/ab23bf02-61ec-4b28-a5e2-d569c946520e" />
+
+### Limitations:
+
+- For Windows 10+ systems, Shimcache cannot be used to prove program execution. 
+- Timestamps are not always accurate, which can cause the timeline timestamps to be out of order. 
+
+### Resources:
+
+- https://forensafe.com/blogs/shimcache.html
+- https://www.thedfirspot.com/post/evidence-of-program-existence-shimcache
+- https://nullsec.us/windows-10-11-appcompatcache-deep-dive/
+- https://github.com/WithSecureLabs/chainsaw/wiki/Shimcache-Analysis
+- https://youtu.be/7byz1dR_CLg?si=4JYrI_DQ9YdVkLM1
+
+<br>
