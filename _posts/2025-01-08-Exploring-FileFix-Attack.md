@@ -2,7 +2,7 @@
 
 I would first like to acknowledge that most of this information comes from an incredible blog post by mrd0x, found [here](https://mrd0x.com/filefix-clickfix-alternative/). I am not going to sit here and claim that I have come across a super novel social engineering technique that supersedes a ClickFix attack, this report is meant to serve as me exploring the FileFix attack and what forensic artifacts can be used to investigate it. 
 
----
+<br>
 
 ## Context: From ClickFix to FileFix
 
@@ -17,7 +17,7 @@ I recommend exploring this [post](https://www.proofpoint.com/au/blog/threat-insi
 
 Whilst ClickFix is extremely effective, persuading users to execute weird looking commands in the Run Dialog can challenging. Furthermore, detection of such an attempt is relatively simple, as most EDR tools will notice the suspicious process genealogy, for example, explorer.exe spawning child processes like cmd.exe, powershell.exe, mshta.exe, etc. This is where the FileFix attack comes into play. FileFix is another form of social engineering that involves enticing a user into pasting a malicious command, typically PowerShell, into the file explorer address bar. 
 
----
+<br>
 
 ## FileFix in Practice
 
@@ -46,7 +46,7 @@ Everything after the `#` is treated as a comment, therefore, only the PowerShell
 
 **Figure 4 Windows Defender FileFix Detection**
 
----
+<br>
 
 ## FileFix Artifacts
 
@@ -64,7 +64,7 @@ In this instance, I am using a tool called Registry Explorer by Eric Zimmerman t
 
 Aside from the TypedPaths key, you can also use a variety of artifacts such as exploring a user’s browsing history to try and find the source hosting the FileFix attack, using something like the Wayback Machine if the site is taken down or offline. 
 
----
+<br>
 
 ## Conclusion
 
