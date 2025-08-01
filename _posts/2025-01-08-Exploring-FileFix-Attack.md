@@ -4,7 +4,7 @@ I would first like to acknowledge that most of this information comes from an in
 
 <br>
 
-### Context: From ClickFix to FileFix
+### **Context: From ClickFix to FileFix**
 
 ClickFix is a type of social engineering attack whereby users are prompted to execute malicious code through the Run Dialog, all under the guise of performing a captcha (see Figure 1). 
 
