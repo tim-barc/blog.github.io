@@ -28,7 +28,7 @@ For context, RecentDocs tracks the last 150 files or folders opened, with the MR
 
 After loading the NTUSER.dat hive and navigating to the registry key, you will see something like as follows:
 
-<img width="940" height="248" alt="Image" src="https://github.com/user-attachments/assets/5b3185d9-0cbf-486d-ac69-0843d229ecf8" /
+<img width="940" height="248" alt="Image" src="https://github.com/user-attachments/assets/5b3185d9-0cbf-486d-ac69-0843d229ecf8" />
 
 #### Limitations:
 
