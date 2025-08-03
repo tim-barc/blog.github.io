@@ -45,7 +45,7 @@ After loading the NTUSER.dat hive and navigating to the registry key, you will s
 <br> 
 
 ### **Office MRU**
-#### **Location: NTUSER.DAT\Software\Microsoft\Office\Version**
+#### **Location:** NTUSER.DAT\Software\Microsoft\Office\Version
 NTUSER.DAT\Software\Microsoft\Office\VERSION\UserMRU\Live_ID_####\File MRU
 NTUSER.DAT\Software\Microsoft\Office\VERSION\UserMRU\Live_ID_####\Place MRU
 
