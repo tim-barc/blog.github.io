@@ -104,14 +104,14 @@ ShellBags Explorer, like many Eric Zimmerman tools, allows you to load the live 
 
 ### **Comdlg32**
 
-####Location: NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePidlMRU
+#### Location: NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePidlMRU
 OpenSavePidIMRU tracks files that have been opened or saved within a Windows shell dialog box. When you open or save a file, a dialogue box appears asking us where to save or open that file from. Once you open/save a file at a specific location, Windows remembers that location. This key is also responsible for tracking auto-complete terms for the same dialog box. As you can imagine, this is a big data set as it tracks files that have been opened or saved using applications like web browsers, text editors, etc. The OpenSavePidlMRU key contains:
 - File Extension
 - MRU Position
 - Absolute path (includes the filename)
 - Opened on timestamp
 
-####Location: NTUSER.dat: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedMRU
+#### Location: NTUSER.dat: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\LastVisitedMRU
 
 LastVisitedMRU tracks the executable used by an application to open the files documented in the OpenSavePidIMRU key. Each value also tracks the directory location for the last file that was accessed by the application. The LastVisitedMRU key contains:
 - MRU Position
@@ -154,7 +154,7 @@ Upon navigating to the registry key, you will see something like as follows:
 
 <img width="940" height="97" alt="Image" src="https://github.com/user-attachments/assets/6eaba591-d139-4be6-8c12-b85812368e19" />
 
-####Limitations:
+#### Limitations:
 - Only paths that exist (at the time it was typed into the address bar) are recorded in this key. 
 - Data will not be recorded if the user opts out of Windows tracking app launches. 
 
