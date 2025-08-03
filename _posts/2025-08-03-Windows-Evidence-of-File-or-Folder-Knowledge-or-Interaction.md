@@ -1,16 +1,16 @@
 # Windows Evidence of File/Folder Knowledge/Interaction
 
 Evidence of file or folder knowledge/interaction refers to artifacts that demonstrate a user was aware of, accessed, or interacted with a file or directory. This report explores the following artifacts:
-- RecentDocs
-- Office Recent Files
-- ShellBags
-- Comdlg32
-- TypedPaths
-- WordWheelQuery
-- LNK Files
-- Jump Lists
-- Activities Cache Database
-- ThumbCache
+- [RecentDocs](#recentdocs)
+- [Office Recent Files](#office-mru)
+- [ShellBags](#shellbags)
+- [Comdlg32](#comdlg32)
+- [TypedPaths](#typedpaths)
+- [WordWheelQuery](#wordwheelquery)
+- [LNK Files](#lnk-files)
+- [Jump Lists](#jumplists)
+- [Activities Cache Database](#activities-cache-database-activitescachedb)
+- [ThumbCache](#thumbcache)
 
 ### **RecentDocs**
 #### Location: NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs
