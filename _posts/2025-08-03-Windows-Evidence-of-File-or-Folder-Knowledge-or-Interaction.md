@@ -256,7 +256,7 @@ The Windows activity history keeps track of application and services usage, file
 WxTCmd (Windows 10 Timeline database parser) is a tool created by Eric Zimmerman that we can use to parse the activities cache database:
 
 ```powershell
-.\WxTCmd.exe -f "ActivitiesCache.db" --csv ." 
+.\WxTCmd.exe -f "ActivitiesCache.db" --csv . 
 ```
 
 #### Resources:
