@@ -158,7 +158,7 @@ Upon navigating to the registry key, you will see something like as follows:
 - Only paths that exist (at the time it was typed into the address bar) are recorded in this key. 
 - Data will not be recorded if the user opts out of Windows tracking app launches. 
 
-Resources:
+#### Resources:
 - https://www.4n6post.com/2023/02/registry-typedpath.html
 - https://www.cybertriage.com/blog/ntuser-dat-forensics-analysis-2025/
 - https://forensafe.com/blogs/typedpaths.html
