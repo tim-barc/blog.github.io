@@ -185,7 +185,7 @@ Upon navigating to the WordWheelQuery key, you will be presented with something 
 ### **LNK Files**
 #### **Location:** C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Recent
 
-LNK files are Windows shortcut files that are automatically created by Windows whenever a user opens files. These LNK files are used by Windows to ensure quick access to certain files. LNK files can be used as evidence that a user accessed a file. LNK files contain information including:
+LNK files are Windows shortcut files that are automatically created whenever a user opens files. These LNK files are used by Windows to ensure quick access to certain files, and can be used by investigators as evidence that a user accessed a file. LNK files contain information including:
 - Name of the file
 - Original path to the target file (the file the shortcut is referencing)
 - MAC timestamps of the target file and the .lnk file
