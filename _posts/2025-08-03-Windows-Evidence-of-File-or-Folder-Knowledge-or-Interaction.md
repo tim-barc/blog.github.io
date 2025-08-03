@@ -37,8 +37,8 @@ After loading the NTUSER.dat hive and navigating to the registry key, you will s
 
 #### **Resources:**
 
-- https://darkcybe.github.io/posts/DFIR_Evidence_of_File_and_Folder_Interaction/#internet-explorer-ie-and-edge-file-history
-- https://www.magnetforensics.com/blog/what-is-mru-most-recently-used/
+- (https://darkcybe.github.io/posts/DFIR_Evidence_of_File_and_Folder_Interaction/#internet-explorer-ie-and-edge-file-history)
+- (https://www.magnetforensics.com/blog/what-is-mru-most-recently-used/)
 - https://www.forensafe.com/blogs/recentdocs.html
 - https://forensic4cast.com/2019/03/the-recentdocs-key-in-windows-10/
 
