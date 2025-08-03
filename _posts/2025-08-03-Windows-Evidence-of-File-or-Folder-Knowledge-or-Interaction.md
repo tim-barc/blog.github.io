@@ -13,7 +13,7 @@ Evidence of file or folder knowledge/interaction refers to artifacts that demons
 - [ThumbCache](#thumbcache)
 
 ### **RecentDocs**
-#### Location: NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs
+#### **Location: NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs**
 
 RecentDocs is a registry key that contains information about recently accessed files or folders and is used to populate data in recent menus of the Start Menu (Windows XP) or the Recent Items folder in the User directory (Windows 10). The RecentDocs key contains:
 - File extension
@@ -24,18 +24,18 @@ RecentDocs is a registry key that contains information about recently accessed f
 - Extension Last Opened timestamp 
 For context, RecentDocs tracks the last 150 files or folders opened, with the MRU list keeping track of the order in which each file/folder was opened. 
 
-#### Tool: Registry Explorer
+#### **Tool: Registry Explorer**
 
 After loading the NTUSER.dat hive and navigating to the registry key, you will see something like as follows:
 
 <img width="940" height="248" alt="Image" src="https://github.com/user-attachments/assets/5b3185d9-0cbf-486d-ac69-0843d229ecf8" />
 
-#### Limitations:
+#### **Limitations:**
 
 - Doesn’t track all file types equally. Some file types might be tracked more reliably than others. 
 - Data will not be recorded if a user opts out of Windows tracking recently accessed docs. 
 
-#### Resources:
+#### **Resources:**
 
 - https://darkcybe.github.io/posts/DFIR_Evidence_of_File_and_Folder_Interaction/#internet-explorer-ie-and-edge-file-history
 - https://www.magnetforensics.com/blog/what-is-mru-most-recently-used/
@@ -288,7 +288,7 @@ If you click on a row, you can see the actual thumbnail image. To try and map th
 - https://www.ghacks.net/2014/03/12/thumbnail-cache-files-windows/
 - https://youtu.be/5efCp1VXhfQ?si=ljTfC2tHPY1Jc7wp
 
-### Conclusion
+### **Conclusion**
 The artifacts discussed, such as RecentDocs, Shellbags, LNK files, and Jump Lists, provide crucial evidence of user interaction with files and folders on Windows systems. By analysing these artifacts, forensic analysts can reconstruct user activities and establish timelines of events. It is important to consider each artifact's unique capabilities, limitations, and contexts to ensure accurate forensic conclusions. 
 
 
