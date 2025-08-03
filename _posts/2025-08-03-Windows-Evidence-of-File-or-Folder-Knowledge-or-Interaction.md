@@ -288,5 +288,8 @@ If you click on a row, you can see the actual thumbnail image. To try and map th
 - https://www.ghacks.net/2014/03/12/thumbnail-cache-files-windows/
 - https://youtu.be/5efCp1VXhfQ?si=ljTfC2tHPY1Jc7wp
 
+### Conclusion
+The artifacts discussed, such as RecentDocs, Shellbags, LNK files, and Jump Lists, provide crucial evidence of user interaction with files and folders on Windows systems. By analysing these artifacts, forensic analysts can reconstruct user activities and establish timelines of events. It is important to consider each artifact's unique capabilities, limitations, and contexts to ensure accurate forensic conclusions. 
+
 
 
