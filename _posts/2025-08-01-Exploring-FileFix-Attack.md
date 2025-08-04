@@ -66,6 +66,6 @@ Aside from the TypedPaths key, you can also use a variety of artifacts such as e
 
 <br>
 
-### Conclusion
+### **Conclusion**
 
 The FileFix attack is increasingly observed in the [wild](https://thedfirreport.com/2025/07/14/kongtuke-filefix-leads-to-new-interlock-rat-variant/) and offers threat actors a more convincing method than ClickFix. Both methods are easy to detect, and forensic artifacts such as the RunMRU and TypedPaths can be used to investigate both ClickFix and FileFix attacks respectively.
