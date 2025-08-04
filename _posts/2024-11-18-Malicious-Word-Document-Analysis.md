@@ -26,20 +26,20 @@ To analyse the VBA macros, I used oledump to find the location of these Macros a
 
 <img width="668" height="199" alt="Image" src="https://github.com/user-attachments/assets/4c5aed40-780d-4167-a054-f452f847d2ae" />
 
-- Object 7: Writes and executes a file named auxiliary2.aux, likely a malicious payload. This macro leverages the AutoOpen function for immediate execution upon running the document. 
+- **Object 7:** Writes and executes a file named auxiliary2.aux, likely a malicious payload. This macro leverages the AutoOpen function for immediate execution upon running the document. 
 
 <img width="749" height="413" alt="Image" src="https://github.com/user-attachments/assets/2f03feeb-c097-403b-b69c-5f3abf0b7ed1" />
  
-- Object 10: Executes the auxiliary file through a function named Calculate_values. 
+- **Object 10:** Executes the auxiliary file through a function named Calculate_values. 
 
 <img width="747" height="182" alt="Image" src="https://github.com/user-attachments/assets/0a063085-c1f8-4687-8135-0815a6a80b23" />
  
-- Object 11: Attaches a malicious template (Base.dotm or Normal.dotm) for persistence. It also employs anti-analysis techniques, such as deleting macro code after execution. 
+- **Object 11:** Attaches a malicious template (Base.dotm or Normal.dotm) for persistence. It also employs anti-analysis techniques, such as deleting macro code after execution. 
 
 <img width="582" height="440" alt="Image" src="https://github.com/user-attachments/assets/57b25473-f3d3-4686-a473-68e37e8af8dd" />
  
-- Object 12: Determines the system architecture (32-bit or 64-bit) and reads binary data, likely to deliver an appropriate payload. 
-- Objects 13 and 14: Contain obfuscated, decimal-encoded data. After decoding using a custom python script and cyberchef, it was revealed that these macros generate and write a Portable Executable (PE) file to disk.
+- **Object 12:** Determines the system architecture (32-bit or 64-bit) and reads binary data, likely to deliver an appropriate payload. 
+- **Objects 13 and 14:** Contain obfuscated, decimal-encoded data. After decoding using a custom python script and cyberchef, it was revealed that these macros generate and write a Portable Executable (PE) file to disk.
 
 <img width="444" height="377" alt="Image" src="https://github.com/user-attachments/assets/d4bc6b06-e2c7-4ec9-a7d8-b4b34a25c681" />
 
@@ -57,7 +57,7 @@ Using a custom python script as seen below, the obfuscated macros in objects 13 
 
 <img width="940" height="132" alt="Image" src="https://github.com/user-attachments/assets/56149cba-8474-4821-82ea-0e188e59c30d" />
 
-Network Indicators
+**Network Indicators:**
 - An IP address embedded in PE file was identified but it had no detection on VirusTotal. 
 
 <img width="940" height="73" alt="Image" src="https://github.com/user-attachments/assets/50c91061-8d45-4410-9b04-3ba4f797d862" />
@@ -71,8 +71,6 @@ The two extracted PE files were subjected to sandbox testing using Hybrid-Analys
 <img width="940" height="215" alt="Image" src="https://github.com/user-attachments/assets/d2e2e84f-6fa5-4066-89b4-aa3259ccd36b" />
  
 Next steps would be to analyse the two PE files using a sandbox like FLARE VM or AnyRun, to uncover more IOCs. 
-
-<br> 
 
 ### **Indicators of Compromise (IOCs)**
 
