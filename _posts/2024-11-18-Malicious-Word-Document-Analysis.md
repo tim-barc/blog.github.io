@@ -29,14 +29,17 @@ To analyse the VBA macros, I used oledump to find the location of these Macros a
 - **Object 7:** Writes and executes a file named auxiliary2.aux, likely a malicious payload. This macro leverages the AutoOpen function for immediate execution upon running the document. 
 
 <img width="749" height="413" alt="Image" src="https://github.com/user-attachments/assets/2f03feeb-c097-403b-b69c-5f3abf0b7ed1" />
+
  
 - **Object 10:** Executes the auxiliary file through a function named Calculate_values. 
 
 <img width="747" height="182" alt="Image" src="https://github.com/user-attachments/assets/0a063085-c1f8-4687-8135-0815a6a80b23" />
+
  
 - **Object 11:** Attaches a malicious template (Base.dotm or Normal.dotm) for persistence. It also employs anti-analysis techniques, such as deleting macro code after execution. 
 
 <img width="582" height="440" alt="Image" src="https://github.com/user-attachments/assets/57b25473-f3d3-4686-a473-68e37e8af8dd" />
+
  
 - **Object 12:** Determines the system architecture (32-bit or 64-bit) and reads binary data, likely to deliver an appropriate payload. 
 - **Objects 13 and 14:** Contain obfuscated, decimal-encoded data. After decoding using a custom python script and cyberchef, it was revealed that these macros generate and write a Portable Executable (PE) file to disk.
