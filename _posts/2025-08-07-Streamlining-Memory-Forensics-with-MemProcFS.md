@@ -151,13 +151,11 @@ Registry artifacts include (but not limited to):
 
 You can hunt for basic persistence mechanisms by checking the following locations:
 
-- **Services (M:\sys\services)**: The services folder contains information about services extracted from the service control manager (SCM). 
+- **Services (M:\sys\services)**: The services folder contains information about services extracted from the service control manager (SCM).  
+  <img width="940" height="151" alt="Image" src="https://github.com/user-attachments/assets/aad5f307-3291-47dc-9d87-f02ff8d34256" />
 
-<img width="940" height="151" alt="Image" src="https://github.com/user-attachments/assets/aad5f307-3291-47dc-9d87-f02ff8d34256" />
- 
-- **Scheduled Tasks (M:\sys\tasks)**: The tasks folder contains information about scheduled tasks extracted from the registry. 
-
-<img width="940" height="131" alt="Image" src="https://github.com/user-attachments/assets/6c1e128b-cac8-4d9b-85dd-d57e0ae35fd9" /> 
+- **Scheduled Tasks (M:\sys\tasks)**: The tasks folder contains information about scheduled tasks extracted from the registry.  
+  <img width="940" height="131" alt="Image" src="https://github.com/user-attachments/assets/6c1e128b-cac8-4d9b-85dd-d57e0ae35fd9" />
 
 <br>
 
@@ -166,6 +164,8 @@ You can hunt for basic persistence mechanisms by checking the following location
 Comprehensive system information such as hostname, timezone, and system version can be found in several text files within the M:\sys folder:
 
 <img width="284" height="434" alt="Image" src="https://github.com/user-attachments/assets/b8152525-73b2-416a-944b-bad93bd7eb3e" />
+
+<br>
 
 ### **Conclusion**
 
