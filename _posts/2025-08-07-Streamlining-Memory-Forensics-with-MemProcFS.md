@@ -46,7 +46,7 @@ The forensic 1 option performs a bunch of analysis tasks and outputs the result 
 
 The following explores the key information you can quickly access in the mounted drive. Please consult to the [documentation](https://github.com/ufrisk/MemProcFS/wiki) to understand its full capabilities. Another incredible feature of MemProcFS, is that each forensic folder contains a readme file that details what the folder contains (i.e., what the plugin did).
 
-#### **Forensic Output**
+### **Forensic Output**
 
 Key forensic information provided by the forensic option output include:
 
@@ -74,13 +74,13 @@ Whilst this will show a bunch of false positives, in the above example, we can s
 
 <br>
 
-#### **Process Information**
+### **Process Information**
 
 Process information includes:
 - **Process Listings (M:\sys\proc)**: The proc folder contains three files:
- - proc.txt: Lists processes and their parent processes in a tree view.
- - proc-v.txt: Lists processes and their parent processes along with process image path and command line. 
- - proc-time.txt: Process list sorted by creation time. 
+    - `proc.txt`: Lists processes and their parent processes in a tree view.
+    - `proc-v.txt`: Lists processes and their parent processes along with process image path and command line.
+    - `proc-time.txt`: Process list sorted by creation time.
 
 <img width="180" height="147" alt="Image" src="https://github.com/user-attachments/assets/3b9c1ac3-f762-4b5e-8337-f073ac7aa6e3" />
  
@@ -111,7 +111,7 @@ Memmap which shows the virtual address tables (VADs) and page table. This enable
 
 <br>
 
-#### **Network Connections**
+### **Network Connections**
 
 Network connections and DNS information includes:
 
@@ -125,7 +125,7 @@ Network connections and DNS information includes:
 
 <br>
 
-#### **Event Logs**
+### **Event Logs**
 
 - **Evtx files (M:\misc\eventlog)**: The eventlog directory contains event log files extracted from memory. The event log files can also be found in other locations, however, all event logs extracted from memory are saved to this single location for ease of access:
 
@@ -135,7 +135,7 @@ You can use tools like EvtxECmd to parse these event logs and view the output in
 
 <br>
 
-#### **Registry**
+### **Registry**
 
 Registry artifacts include (but not limited to):
 
@@ -147,7 +147,7 @@ Registry artifacts include (but not limited to):
 
 <br>
 
-#### **Registry**
+### **Persistence Checks**
 
 You can hunt for basic persistence mechanisms by checking the following locations:
 
@@ -161,7 +161,7 @@ You can hunt for basic persistence mechanisms by checking the following location
 
 <br>
 
-#### **Registry**
+### **System Information**
 
 Comprehensive system information such as hostname, timezone, and system version can be found in several text files within the M:\sys folder:
 
