@@ -21,7 +21,8 @@ RecentDocs is a registry key that contains information about recently accessed f
 - LNK Name
 - MRU Position
 - Opened On timestamp, and
-- Extension Last Opened timestamp 
+- Extension Last Opened timestamp
+  
 For context, RecentDocs tracks the last 150 files or folders opened, with the MRU list keeping track of the order in which each file/folder was opened. 
 
 #### **Tool: Registry Explorer**
