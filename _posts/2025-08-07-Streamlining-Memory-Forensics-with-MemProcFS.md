@@ -95,19 +95,19 @@ This is a great way to see what was running on the system, and you can often ide
 
 <img width="114" height="188" alt="Image" src="https://github.com/user-attachments/assets/2e090a84-ff71-43cf-81c0-17342d7c51f1" />
  
-	If you click on any of the folders, you can find a lot of information about the process:
+&nbsp;&nbsp;&nbsp;&nbsp; If you click on any of the folders, you can find a lot of information about the process:
 
 <img width="72" height="291" alt="Image" src="https://github.com/user-attachments/assets/64fe2f89-c1fa-4c9c-b02c-77ad018b508c" />
  
-	including handles (which show what objects, like files, registry keys, processes, etc, the process was interacting with)
+&nbsp;&nbsp;&nbsp;&nbsp; including handles (which show what objects, like files, registry keys, processes, etc, the process was interacting with)
 
 <img width="429" height="339" alt="Image" src="https://github.com/user-attachments/assets/fe642f64-c127-4e73-bd62-a93c452500d7" />
  
-	Modules, which show the DLLs used by the program and the process executable itself:
+&nbsp;&nbsp;&nbsp;&nbsp; Modules, which show the DLLs used by the program and the process executable itself:
 
 <img width="259" height="311" alt="Image" src="https://github.com/user-attachments/assets/fb38e565-7c15-49d6-8972-b956a7a37fab" />
  
-	Memmap which shows the virtual address tables (VADs) and page table. This enables you to detect things like 	process injection, especially if you see READWRITE EXECUTE permissions on a page that has an MZ file header 	(PE file), and much more. It is important to note that the pid folder contains the same information, the 	only difference being that each folder is named after the PID of the process, rather than the image name 	followed by the PID. The name and PID folders are useful when drilling down into a specific process.
+&nbsp;&nbsp;&nbsp;&nbsp; Memmap which shows the virtual address tables (VADs) and page table. This enables you to &nbsp;&nbsp;&nbsp;&nbsp; detect things like process injection, especially if you see READWRITE EXECUTE permissions &nbsp;&nbsp;&nbsp;&nbsp; on a page that has an MZ file header (PE file), and much more. It is important to note &nbsp;&nbsp;&nbsp;&nbsp; that the pid folder contains the same information, the only difference being that each &nbsp;&nbsp;&nbsp;&nbsp; folder is named after the PID of the process, rather than the image name followed by the &nbsp;&nbsp;&nbsp;&nbsp; PID. The name and PID folders are useful when drilling down into a specific process.
 
 <br>
 
