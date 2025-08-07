@@ -16,6 +16,7 @@ From my little research, MemProcFS lacks the popularly and respect that it deser
 - [Persistence Checks](#persistence-checks)
 - [System Information](#system-information)
 - [Conclusion](#conclusion)
+- [Extra Resources](#extra-resources)
 
 ### **Installation**
 
