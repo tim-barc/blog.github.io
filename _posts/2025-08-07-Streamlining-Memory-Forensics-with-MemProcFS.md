@@ -4,6 +4,35 @@ MemProcFS, or **Mem**ory **Proc**ess **F**ile **S**ystem, is a tool that enables
 
 From my little research, MemProcFS lacks the popularly and respect that it deserves. As Richard Davis (13Cubed) puts it in his YouTube video title, “MemProcFS – This Changes Everything”, highlighting how even seasoned practitioners who previously relied on Volatility understand the benefit and value MemProcFS provides. This post is not meant to serve as a deep dive into the tool, if that’s what you came for, make sure to consult the documentation or other blog posts. It is meant to serve as a surface level exploration of the tool, showing off its key benefits. 
 
+## Table of Contents
+
+- [Streamlining Memory Forensics with MemProcFS](#streamlining-memory-forensics-with-memprocfs)
+- [Installation](#installation)
+- [Getting Started](#getting-started)
+- [Forensic Output](#forensic-output)
+  - [Recovered Files (M:\forensic\files)](#recovered-files-mforensicfiles)
+  - [Malware Indicators (M:\forensic\findevil)](#malware-indicators-mforensicfindevil)
+  - [NTFS Artifacts (M:\forensic\ntfs)](#ntfs-artifacts-mforensicntfs)
+  - [Timeline Analysis (M:\forensic\timeline)](#timeline-analysis-mforensictimeline)
+  - [Web Activity (M:\forensic\web)](#web-activity-mforensicweb)
+- [Process Information](#process-information)
+  - [Process Listings (M:\sys\proc)](#process-listings-msysproc)
+  - [Process-specific data (M:\name or M:\pid)](#process-specific-data-mname-or-mpid)
+- [Network Connections](#network-connections)
+  - [Network Connections (M:\sys\net)](#network-connections-msysnet)
+  - [DNS Entries (M:\sys\net\dns)](#dns-entries-msysnetdns)
+- [Event Logs](#event-logs)
+  - [Evtx files (M:\misc\eventlog)](#evtx-files-mmisceventlog)
+- [Registry](#registry)
+  - [Registry Hive Files (M:\registry\hive_files)](#registry-hive-files-mregistryhive_files)
+  - [Registry By-Hive (M:\registry\by-hive)](#registry-by-hive-mregistryby-hive)
+  - [Registry HKLM (M:\registry\HKLM)](#registry-hklm-mregistryhklm)
+- [Persistence Checks](#persistence-checks)
+  - [Services (M:\sys\services)](#services-msysservices)
+  - [Scheduled Tasks (M:\sys\tasks)](#scheduled-tasks-msystasks)
+- [System Information](#system-information)
+- [Conclusion](#conclusion)
+
 ### **Installation**
 
 MemProcFS installation is straightforward:
