@@ -92,19 +92,15 @@ This is a great way to see what was running on the system, and you can often ide
 
 
 - **Process-specific data (M:\name or M:\pid)**: The name folder contains all the processes ordered by their image name:
-
 <img width="114" height="188" alt="Image" src="https://github.com/user-attachments/assets/2e090a84-ff71-43cf-81c0-17342d7c51f1" />
  
 If you click on any of the folders, you can find a lot of information about the process:
-
 <img width="72" height="291" alt="Image" src="https://github.com/user-attachments/assets/64fe2f89-c1fa-4c9c-b02c-77ad018b508c" />
  
 including handles (which show what objects, like files, registry keys, processes, etc, the process was interacting with)
-
 <img width="429" height="339" alt="Image" src="https://github.com/user-attachments/assets/fe642f64-c127-4e73-bd62-a93c452500d7" />
  
 Modules, which show the DLLs used by the program and the process executable itself:
-
 <img width="259" height="311" alt="Image" src="https://github.com/user-attachments/assets/fb38e565-7c15-49d6-8972-b956a7a37fab" />
  
 Memmap which shows the virtual address tables (VADs) and page table. This enables you to detect things like process injection, especially if you see READWRITE EXECUTE permissions on a page that has an MZ file header (PE file), and much more. It is important to note that the pid folder contains the same information, the only difference being that each folder is named after the PID of the process, rather than the image name followed by the PID. The name and PID folders are useful when drilling down into a specific process.
@@ -116,11 +112,9 @@ Memmap which shows the virtual address tables (VADs) and page table. This enable
 Network connections and DNS information includes:
 
 - **Network Connections (M:\sys\net)**: The net folder contains multiple files that show network connections, akin to Volatility’s netscan plugin:
-
 <img width="940" height="258" alt="Image" src="https://github.com/user-attachments/assets/d8efac14-5703-4e2d-aa10-2a6bfcd4e08e" />
  
 - **DNS Entries (M:\sys\net\dns)**: The dns folder contains a txt file of extracted cached DNS entries:
- 
 <img width="940" height="241" alt="Image" src="https://github.com/user-attachments/assets/20eb8f01-84f0-4c58-87c9-e656cb71927a" />
 
 <br>
@@ -128,10 +122,9 @@ Network connections and DNS information includes:
 ### **Event Logs**
 
 - **Evtx files (M:\misc\eventlog)**: The eventlog directory contains event log files extracted from memory. The event log files can also be found in other locations, however, all event logs extracted from memory are saved to this single location for ease of access:
-
 <img width="783" height="528" alt="Image" src="https://github.com/user-attachments/assets/0082228a-5a44-4285-bfa1-441961d4241f" />
  
-	You can use tools like EvtxECmd to parse these event logs and view the output in Timeline Explorer. 	Alternatively, you can just use Event Viewer or similar tools.
+You can use tools like EvtxECmd to parse these event logs and view the output in Timeline Explorer. 	Alternatively, you can just use Event Viewer or similar tools.
 
 <br>
 
