@@ -22,7 +22,7 @@ MemProcFS installation is straightforward:
 
 To execute MemProcFS and see the help menu, you can enter the following command:
 
-- ```powershell
+```powershell
 .\MemProcFS.exe
 ```
 
@@ -34,9 +34,9 @@ Processing a memory dump with MemProcFS is simple, the most common method is by 
 .\MemProcFS.exe -f "<path_to_memory_dump>" -forensic 1
 ```
 
-  This command mounts the virtual filesystem output to the drive letter M. Within this drive, you can find a bunch of important forensic information which I will be exploring shortly. 
-  <img width="309" height="152" alt="Image" src="https://github.com/user-attachments/assets/a1e0e956-793a-4278-af0e-f458bbdb9440" />
-  The forensic 1 option performs a bunch of analysis tasks and outputs the result into an SQLite database and in the forensic sub-directory. These analysis tasks include things like MFT scanning, Timeline analysis for processes, registry, MFT, etc, and much more. If you are familiar with KAPE, an incredible tool made by Eric Zimmerman, you can think of the forensic option as modules, which run programs/plugins against artifacts to generate a more digestible output. It is important to note that MemProcFS can take some time to process the memory dump, so be patient. Within the forensic folder, you can find a text file titled progress_percent.txt, this shows you the progress, you can also see when it finishes in the terminal output. 
+This command mounts the virtual filesystem output to the drive letter M. Within this drive, you can find a bunch of important forensic information which I will be exploring shortly. 
+<img width="309" height="152" alt="Image" src="https://github.com/user-attachments/assets/a1e0e956-793a-4278-af0e-f458bbdb9440" />
+The forensic 1 option performs a bunch of analysis tasks and outputs the result into an SQLite database and in the forensic sub-directory. These analysis tasks include things like MFT scanning, Timeline analysis for processes, registry, MFT, etc, and much more. If you are familiar with KAPE, an incredible tool made by Eric Zimmerman, you can think of the forensic option as modules, which run programs/plugins against artifacts to generate a more digestible output. It is important to note that MemProcFS can take some time to process the memory dump, so be patient. Within the forensic folder, you can find a text file titled progress_percent.txt, this shows you the progress, you can also see when it finishes in the terminal output. 
 
 <br> 
 
