@@ -82,32 +82,32 @@ Process information includes:
     - `proc-v.txt`: Lists processes and their parent processes along with process image path and command line.
     - `proc-time.txt`: Process list sorted by creation time.
 
-&nbsp;&nbsp;&nbsp;&nbsp; <img width="180" height="147" alt="Image" src="https://github.com/user-attachments/assets/3b9c1ac3-f762-4b5e-8337-f073ac7aa6e3" />
+<img width="180" height="147" alt="Image" src="https://github.com/user-attachments/assets/3b9c1ac3-f762-4b5e-8337-f073ac7aa6e3" />
  
-&nbsp;&nbsp;&nbsp;&nbsp; Both `proc.txt`: and `proc-v.txt` can be thought of as the output of the pstree plugin within Volatility, here you can find the processes &nbsp;&nbsp;&nbsp;&nbsp; captured from the memory dump in hierarchical order:
+Both `proc.txt`: and `proc-v.txt` can be thought of as the output of the pstree plugin within Volatility, here you can find the processes captured from the memory dump in hierarchical order:
 
-&nbsp;&nbsp;&nbsp;&nbsp; <img width="940" height="621" alt="Image" src="https://github.com/user-attachments/assets/de9885c6-ac56-4d45-a274-8ccadd7b03df" />
+<img width="940" height="621" alt="Image" src="https://github.com/user-attachments/assets/de9885c6-ac56-4d45-a274-8ccadd7b03df" />
  
-&nbsp;&nbsp;&nbsp;&nbsp; This is a great way to see what was running on the system, and you can often identify malicious activity through anomalous process genealogy &nbsp;&nbsp;&nbsp;&nbsp; (like Explorer spawning svchost.exe) and so forth. 
+This is a great way to see what was running on the system, and you can often identify malicious activity through anomalous process genealogy (like Explorer spawning svchost.exe) and so forth. 
 
 
 - **Process-specific data (M:\name or M:\pid)**: The name folder contains all the processes ordered by their image name:
 
 <img width="114" height="188" alt="Image" src="https://github.com/user-attachments/assets/2e090a84-ff71-43cf-81c0-17342d7c51f1" />
  
-&nbsp;&nbsp;&nbsp;&nbsp; If you click on any of the folders, you can find a lot of information about the process:
+If you click on any of the folders, you can find a lot of information about the process:
 
 <img width="72" height="291" alt="Image" src="https://github.com/user-attachments/assets/64fe2f89-c1fa-4c9c-b02c-77ad018b508c" />
  
-&nbsp;&nbsp;&nbsp;&nbsp; including handles (which show what objects, like files, registry keys, processes, etc, the process was interacting with)
+including handles (which show what objects, like files, registry keys, processes, etc, the process was interacting with)
 
 <img width="429" height="339" alt="Image" src="https://github.com/user-attachments/assets/fe642f64-c127-4e73-bd62-a93c452500d7" />
  
-&nbsp;&nbsp;&nbsp;&nbsp; Modules, which show the DLLs used by the program and the process executable itself:
+Modules, which show the DLLs used by the program and the process executable itself:
 
 <img width="259" height="311" alt="Image" src="https://github.com/user-attachments/assets/fb38e565-7c15-49d6-8972-b956a7a37fab" />
  
-&nbsp;&nbsp;&nbsp;&nbsp; Memmap which shows the virtual address tables (VADs) and page table. This enables you to detect things like process injection, especially if &nbsp;&nbsp;&nbsp;&nbsp; you see READWRITE EXECUTE permissions on a page that has an MZ file header (PE file), and much more. It is important to note that the pid folder &nbsp;&nbsp;&nbsp;&nbsp;  contains the same information, the only difference being that each folder is named after the PID of the process, rather than the image name &nbsp;&nbsp;&nbsp;&nbsp;  followed by the PID. The name and PID folders are useful when drilling down into a specific process.
+Memmap which shows the virtual address tables (VADs) and page table. This enables you to detect things like process injection, especially if you see READWRITE EXECUTE permissions on a page that has an MZ file header (PE file), and much more. It is important to note that the pid folder contains the same information, the only difference being that each folder is named after the PID of the process, rather than the image name followed by the PID. The name and PID folders are useful when drilling down into a specific process.
 
 <br>
 
