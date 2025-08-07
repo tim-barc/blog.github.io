@@ -6,7 +6,6 @@ From my little research, MemProcFS lacks the popularly and respect that it deser
 
 ## Table of Contents
 
-- [Streamlining Memory Forensics with MemProcFS](#streamlining-memory-forensics-with-memprocfs)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
 - [Forensic Output](#forensic-output)
