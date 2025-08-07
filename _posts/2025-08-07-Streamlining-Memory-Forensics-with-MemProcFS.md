@@ -63,21 +63,21 @@ The following explores the key information you can quickly access in the mounted
 
 Key forensic information provided by the forensic option output include:
 
-- **Recovered Files (M:\forensic\files)**: The `files` module attempts to recover files from file handles in the system, displaying them in a directory structure. Therefore, the `files` folder contains a best-effort reconstructed file system.  
+- **Recovered Files (M:\forensic\files)**: The files module attempts to recover files from file handles in the system, displaying them in a directory structure. Therefore, the files folder contains a best-effort reconstructed file system.  
   <img width="566" height="174" alt="Image" src="https://github.com/user-attachments/assets/47ce0437-7b6f-411f-937b-c14c5ea8290b" />
 
-- **Malware Indicators (M:\forensic\findevil)**: The `Find Evil` module attempts to identify signs of malware infection through things like Windows Defender detections, RWX VADs, suspicious process genealogy, and more. Within this folder, you can find a file titled `findevil.txt`, which contains a bunch of useful information that can come in handy when trying to identify malware.  
+- **Malware Indicators (M:\forensic\findevil)**: The Find Evil module attempts to identify signs of malware infection through things like Windows Defender detections, RWX VADs, suspicious process genealogy, and more. Within this folder, you can find a file titled `findevil.txt`, which contains a bunch of useful information that can come in handy when trying to identify malware.  
   <img width="940" height="183" alt="Image" src="https://github.com/user-attachments/assets/055e1f8a-929e-438e-b551-568460cd1359" />
 
   Whilst this will show a bunch of false positives, in the above example, we can see three **Windows Defender detections**, which have correctly identified malware.
 
-- **NTFS Artifacts (M:\forensic\ntfs)**: The `ntfs` folder contains artifacts related to the NTFS file system. The key artifact within this folder is the `ntfs_files.txt` file, which is the MFT (Master File Table) as extracted from memory.  
+- **NTFS Artifacts (M:\forensic\ntfs)**: The ntfs folder contains artifacts related to the NTFS file system. The key artifact within this folder is the `ntfs_files.txt` file, which is the MFT (Master File Table) as extracted from memory.  
   <img width="940" height="360" alt="Image" src="https://github.com/user-attachments/assets/45dd04a8-370d-4f2a-a019-71b50853be6c" />
 
-- **Timeline Analysis (M:\forensic\timeline)**: The `timeline` folder includes a variety of forensic timelines, sorted chronologically.  
+- **Timeline Analysis (M:\forensic\timeline)**: The timeline folder includes a variety of forensic timelines, sorted chronologically.  
   <img width="347" height="467" alt="Image" src="https://github.com/user-attachments/assets/ab80bc1e-2e8c-4b7c-82cd-5514fba743c1" />
 
-- **Web Activity (M:\forensic\web)**: Within the `web` folder, you can find a user’s browsing activity. It currently supports Chrome, Edge, and Firefox.  
+- **Web Activity (M:\forensic\web)**: Within the web folder, you can find a user’s browsing activity. It currently supports Chrome, Edge, and Firefox.  
   <img width="940" height="100" alt="Image" src="https://github.com/user-attachments/assets/0086214e-f00f-49e5-b8a4-a96ad902e81e" />
 
 <br>
@@ -86,18 +86,18 @@ Key forensic information provided by the forensic option output include:
 
 Process information includes:
 
-- **Process Listings (M:\sys\proc)**: The `proc` folder contains three files:  
+- **Process Listings (M:\sys\proc)**: The proc folder contains three files:  
     - `proc.txt`: Lists processes and their parent processes in a tree view.  
     - `proc-v.txt`: Lists processes and their parent processes along with process image path and command line.  
     - `proc-time.txt`: Process list sorted by creation time.  
   <img width="180" height="147" alt="Image" src="https://github.com/user-attachments/assets/3b9c1ac3-f762-4b5e-8337-f073ac7aa6e3" />
 
-  Both `proc.txt` and `proc-v.txt` can be thought of as the output of the `pstree` plugin within Volatility. Here you can find the processes captured from the memory dump in hierarchical order:  
+  Both `proc.txt` and `proc-v.txt` can be thought of as the output of the pstree plugin within Volatility. Here you can find the processes captured from the memory dump in hierarchical order:  
   <img width="940" height="621" alt="Image" src="https://github.com/user-attachments/assets/de9885c6-ac56-4d45-a274-8ccadd7b03df" />
 
-  This is a great way to see what was running on the system, and you can often identify malicious activity through anomalous process genealogy (like `explorer.exe` spawning `svchost.exe`) and so forth.
+  This is a great way to see what was running on the system, and you can often identify malicious activity through anomalous process genealogy (like explorer.exe spawning svchost.exe) and so forth.
 
-- **Process-specific data (M:\name or M:\pid)**: The `name` folder contains all the processes ordered by their image name.  
+- **Process-specific data (M:\name or M:\pid)**: The name folder contains all the processes ordered by their image name.  
   <img width="114" height="188" alt="Image" src="https://github.com/user-attachments/assets/2e090a84-ff71-43cf-81c0-17342d7c51f1" />
 
   If you click on any of the folders, you can find a lot of information about the process:  
@@ -111,9 +111,9 @@ Process information includes:
 
   Memmap, which shows the virtual address descriptors (VADs) and page table. This enables you to detect things like process injection—especially if you see **READWRITE EXECUTE** permissions on a page that has an MZ file header (PE file)—and much more.
 
-  It is important to note that the `pid` folder contains the same information. The only difference is that each folder is named after the PID of the process, rather than the image name followed by the PID.
+  It is important to note that the pid folder contains the same information. The only difference is that each folder is named after the PID of the process, rather than the image name followed by the PID.
 
-  The `name` and `pid` folders are useful when drilling down into a specific process.
+  The name and pid folders are useful when drilling down into a specific process.
 
 
 <br>
@@ -122,7 +122,7 @@ Process information includes:
 
 Network connections and DNS information includes:
 
-- **Network Connections (M:\sys\net)**: The net folder contains multiple files that show network connections, akin to Volatility’s `netscan` plugin.  
+- **Network Connections (M:\sys\net)**: The net folder contains multiple files that show network connections, akin to Volatility’s netscan plugin.  
   <img width="940" height="258" alt="Image" src="https://github.com/user-attachments/assets/d8efac14-5703-4e2d-aa10-2a6bfcd4e08e" />
 
 - **DNS Entries (M:\sys\net\dns)**: The dns folder contains a `.txt` file of extracted cached DNS entries.  
