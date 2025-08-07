@@ -57,7 +57,7 @@ The forensic 1 option performs a bunch of analysis tasks and outputs the result 
 
 ### **Getting Started**
 
-The following explores the key information you can quickly access in the mounted drive. Please consult to the [documentation](https://github.com/ufrisk/MemProcFS/wiki) to understand its full capabilities. Another incredible feature of MemProcFS, is that each forensic folder contains a readme file that details what the folder contains (i.e., what the plugin did).
+The following explores the key information you can quickly access in the mounted drive. Please consult the [documentation](https://github.com/ufrisk/MemProcFS/wiki) to understand its full capabilities. Another incredible feature of MemProcFS, is that some folders contain a readme file that details what the folder contains (i.e., what the plugin/module did).
 
 ### **Forensic Output**
 
@@ -69,7 +69,7 @@ Key forensic information provided by the forensic option output include:
 - **Malware Indicators (M:\forensic\findevil)**: The Find Evil module attempts to identify signs of malware infection through things like Windows Defender detections, RWX VADs, suspicious process genealogy, and more. Within this folder, you can find a file titled `findevil.txt`, which contains a bunch of useful information that can come in handy when trying to identify malware.  
   <img width="940" height="183" alt="Image" src="https://github.com/user-attachments/assets/055e1f8a-929e-438e-b551-568460cd1359" />
 
-  Whilst this will show a bunch of false positives, in the above example, we can see three **Windows Defender detections**, which have correctly identified malware.
+  Whilst this will show a bunch of false positives, in the above example, we can see three Windows Defender detections, which have correctly identified malware.
 
 - **NTFS Artifacts (M:\forensic\ntfs)**: The ntfs folder contains artifacts related to the NTFS file system. The key artifact within this folder is the `ntfs_files.txt` file, which is the MFT (Master File Table) as extracted from memory.  
   <img width="940" height="360" alt="Image" src="https://github.com/user-attachments/assets/45dd04a8-370d-4f2a-a019-71b50853be6c" />
@@ -109,7 +109,7 @@ Process information includes:
   Modules, which show the DLLs used by the program and the process executable itself:  
   <img width="259" height="311" alt="Image" src="https://github.com/user-attachments/assets/fb38e565-7c15-49d6-8972-b956a7a37fab" />
 
-  Memmap, which shows the virtual address descriptors (VADs) and page table. This enables you to detect things like process injection—especially if you see **READWRITE EXECUTE** permissions on a page that has an MZ file header (PE file)—and much more.
+  Memmap, which shows the virtual address descriptors (VADs) and page table. This enables you to detect things like process injection, especially if you see READWRITE EXECUTE permissions on a page that has an MZ file header (PE file), and much more.
 
   It is important to note that the pid folder contains the same information. The only difference is that each folder is named after the PID of the process, rather than the image name followed by the PID.
 
@@ -146,7 +146,7 @@ Registry artifacts include (but not limited to):
 
 - **Registry Hive Files (M:\registry\hive_files)**: Hive files reconstructed from memory with a best effort-algorithm. These hive files may be partially corrupted, but you can still explore them using tools like Registry Explorer. 
 
-- **Registry By-Hive (M:\registry\by-hive)**: Each hive contains a ROOT key for the normal registry and an ORPHAN key which may contain registry keys without know parent keys.
+- **Registry By-Hive (M:\registry\by-hive)**: Each hive contains a ROOT key for the normal registry and an ORPHAN key which may contain registry keys without known parent keys.
 
 - **Registry HKLM (M:\registry\HKLM)**: This folder shows the registry keys stored within HKEY_LOCAL_MACHINE. 
 
@@ -176,10 +176,12 @@ Comprehensive system information such as hostname, timezone, and system version 
 
 MemProcFS significantly streamlines memory forensics, providing intuitive navigation and actionable insights without extensive prior knowledge. While Volatility remains invaluable for deep, targeted analysis, MemProcFS excels in rapid triaging and employing the kitchen sink approach to memory forensics, positioning it as an essential tool in any forensic analyst’s toolkit. 
 
+<br>
+
 ### **Extra Resources**
 
-- https://www.youtube.com/watch?v=hjWVUrf7Obk
-- https://youtu.be/mca3rLsHuTA?t=952
+- [13Cubed - MemProcFS - This Changes Everything (Youtube)](https://www.youtube.com/watch?v=hjWVUrf7Obk)
+- [Ulf Frisk - Live Memory Attacks and Forensics (Youtube)](https://youtu.be/mca3rLsHuTA?t=952)
 
 
 
