@@ -4,7 +4,7 @@ MemProcFS, or **Mem**ory **Proc**ess **F**ile **S**ystem, is a tool that enables
 
 From my little research, MemProcFS lacks the popularly and respect that it deserves. As Richard Davis (13Cubed) puts it in his YouTube video title, “MemProcFS – This Changes Everything”, highlighting how even seasoned practitioners who previously relied on Volatility understand the benefit and value MemProcFS provides. This post is not meant to serve as a deep dive into the tool, if that’s what you came for, make sure to consult the documentation or other blog posts. It is meant to serve as a surface level exploration of the tool, showing off its key benefits. 
 
-## Table of Contents
+### **Table of Contents**
 
 - [Installation](#installation)
 - [Getting Started](#getting-started)
@@ -175,6 +175,11 @@ Comprehensive system information such as hostname, timezone, and system version 
 ### **Conclusion**
 
 MemProcFS significantly streamlines memory forensics, providing intuitive navigation and actionable insights without extensive prior knowledge. While Volatility remains invaluable for deep, targeted analysis, MemProcFS excels in rapid triaging and employing the kitchen sink approach to memory forensics, positioning it as an essential tool in any forensic analyst’s toolkit. 
+
+### **Extra Resources**
+
+- https://www.youtube.com/watch?v=hjWVUrf7Obk
+- https://youtu.be/mca3rLsHuTA?t=952
 
 
 
