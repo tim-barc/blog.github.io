@@ -144,6 +144,7 @@ PCA (Program Compatibility Assistant) is a newly discovered evidence of executio
 - PcaAppLaunchDic.txt
 - PcaGeneralDb0.txt
 - PcaGeneralDb1.txt.
+  
 PcaAppLaunchDic.txt contains a file path and timestamp pair that details the last execution of a program:
 
 <img width="602" height="104" alt="Image" src="https://github.com/user-attachments/assets/2eb3ad1d-bbd4-4ee1-a2b2-1904b7f8d3aa" />
@@ -208,6 +209,7 @@ The UserAssist artifact displays a table of GUI programs executed on a Windows m
 Within the UserAssist key are several subkeys, the ones of interest are:
 - {CEBFF5CD-ACE2-4F4F-9178-9926F41749EA}: Executed EXE files.
 - {F4E57C4B-2036-45F0-A9AB-443BCFE33D9F}: Executed LNK files.
+  
 Each subkey contains a Count subkey, which is where the information regarding executed programs is stored. You can use a tool like Registry Explorer to view UserAssist. 
 
 <img width="562" height="147" alt="Image" src="https://github.com/user-attachments/assets/e7744c14-0fac-4ff2-ba5b-cb21b08e9ea6" />
@@ -230,7 +232,8 @@ Each subkey contains a Count subkey, which is where the information regarding ex
 SRUM (System Resource Utilisation Monitor) is a feature of Windows 8+ systems that tracks data including:
 - Application usage
 - Network utilisation
-- System energy. 
+- System energy.
+   
 SRUM Network Usage can be extremely helpful when identifying data exfiltration, as it records bandwidth usage in bytes sent and received by an application. 
 
 #### Parsing Tool:
