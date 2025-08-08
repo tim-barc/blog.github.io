@@ -2,13 +2,14 @@
 
 Evidence of execution artifacts are forensic indicators that a program was run on a system. They are essential for incident responders and digital forensics investigators, offering insights into what was executed and when. 
 This report explores the following artifacts:
-- Prefetch
-- Shimcache/AppCompatCache
-- AmCache
-- Program Compatibility Assistant (PCA)
-- MUICache
-- UserAssist 
- SRUM
+- [Prefetch](#prefetch)
+- [Shimcache/AppCompatCache](#shimcacheappcompatcache)
+- [AmCache](#amcache)
+- [Program Compatibility Assistant (PCA)](#program-compatibility-assistant-pca)
+- [MUICache](#muicache)
+- [UserAssist](#userassist)
+- [SRUM](#srum)
+  
 For a complete list of available evidence of execution artifacts, check out this post by Adam Harrison. 
 
 ### **Prefetch**
