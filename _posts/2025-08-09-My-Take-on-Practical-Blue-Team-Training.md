@@ -2,6 +2,8 @@
 
 Finding affordable, or even free, practical cybersecurity training can be surprisingly difficult, especially given the sheer number of providers claiming to be "the best." In this post, I will refer to CTFs, labs, and other forms of hands-on cybersecurity training collectively as challenges. Over the past 2-3 years, I have completed hundreds of these challenges, probably around 400+ in total, spanning both blue teaming and red teaming. I have published over 160 writeups on my [Github](https://github.com/tim-barc/ctf_writeups). Through this experience, I have not only grown my technical skills but also formed a clear view of which platforms offer the most valuable challenges. 
 
+<br>
+
 ### **The Misconception about "Realism"**
 
 One of the biggest misconceptions I see about challenges is the belief that they must perfectly replicate real-world scenarios. While labs and exercises that mimic real incidents are undoubtedly the best, less "realistic" challenges still have their place. Even scenarios that only loosely mirror reality can teach vital skills, from problem-solving and research to mastering tools and understanding common techniques or technologies. I often see experienced professionals dismiss certain CTFs as too unrealistic, and while their criticism is fair, it misses the point: challenges aren't always about replicating the exact situations you will face in the field. They're about building your mindset and giving you a space to experiment, fail, and learn. 
