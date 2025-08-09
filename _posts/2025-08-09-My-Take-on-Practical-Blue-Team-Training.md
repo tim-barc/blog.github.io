@@ -14,7 +14,7 @@ One of the biggest misconceptions I see about challenges is the belief that they
 
 #### **1. CyberDefenders**
 
-<img width="940" height="450" alt="Image" src="https://github.com/user-attachments/assets/0fd3d79a-1a4c-43ec-8cec-dba3d6b58bfc" />
+<img width="940" height="425" alt="Image" src="https://github.com/user-attachments/assets/0fd3d79a-1a4c-43ec-8cec-dba3d6b58bfc" />
 
 [CyberDefenders](https://cyberdefenders.org) offers some of the best training out there. Many of their labs are free, and their subscription model is affordable. What I enjoy most about CyberDefenders is how much the labs push you, I have come across several endpoint forensics challenges that requires several hours of research and experimentation to complete. I have completed challenges that closely mimic real investigations, you often see living-off-the-land binaries and RMM tools, something that is observed constantly in the real world. 
 
@@ -22,7 +22,7 @@ One of the biggest misconceptions I see about challenges is the belief that they
 
 #### **2. Blue Team Labs Online (BTLO)**
 
-<img width="940" height="450" alt="Image" src="https://github.com/user-attachments/assets/02c1221f-6608-4667-8272-e2f3cf799ac3" />
+<img width="940" height="425" alt="Image" src="https://github.com/user-attachments/assets/02c1221f-6608-4667-8272-e2f3cf799ac3" />
 
 [BTLO](https://blueteamlabs.online/) is another excellent choice, with challenges heavily focused on SOC operations and digital forensics. This platform is perfect for intermediate learners, and I highly recommend exploring their certification paths like the BTL1. In my opinion, BTLO offers more SIEM based challenges than CyberDefenders, however, the challenges that involve a SIEM on CyberDefenders are often more realistic, containing millions of logs and thousands of extracted fields. 
 
@@ -30,9 +30,9 @@ One of the biggest misconceptions I see about challenges is the belief that they
 
 #### **3. TryHackMe**
 
-<img width="940" height="450" alt="Image" src="https://github.com/user-attachments/assets/8ab2aeb7-13d6-42f2-b00a-506a6171b380" />
+<img width="940" height="425" alt="Image" src="https://github.com/user-attachments/assets/8ab2aeb7-13d6-42f2-b00a-506a6171b380" />
 
-While [TryHackMe](https://tryhackme.com/) is better known for its beginner-to-intermediate pentesting content, it has a growing library of blue team challenges. These may not always be the most realistic, but they excel in gamifying learning and teaching the core concepts and tools. For those new to blue teaming, TryHackMe provides a fun, structured path into the fundamentals all the way up to expert knowledge. TryHackMe was the first training platform I personally subscribed to, and I have been a subscriber for over 2 years, highlighting just how enjoyable it is. 
+While [TryHackMe](https://tryhackme.com/) is better known for its beginner-to-intermediate pentesting content, it has a growing library of blue team challenges. These may not always be the most realistic, but they excel in gamifying learning and teaching the core concepts and tools. For those new to blue teaming, TryHackMe provides a fun, structured path into the fundamentals all the way up to expert knowledge. TryHackMe was the first training platform I subscribed to, and I have been a subscriber for over 2 years, highlighting just how enjoyable it is. 
 
 <br> 
 
