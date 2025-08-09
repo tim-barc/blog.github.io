@@ -24,7 +24,7 @@ One of the biggest misconceptions I see about challenges is the belief that they
 
 <img width="940" height="450" alt="Image" src="https://github.com/user-attachments/assets/02c1221f-6608-4667-8272-e2f3cf799ac3" />
 
-[BTLO](https://blueteamlabs.online/) is another excellent choice, with challenges heavily focused on SOC operations and digital forensics. This platform is perfect for intermediate learners, and I highly recommend exploring their certifications paths like the BTL1. In my opinion, BTLO offers more SIEM based challenges than CyberDefenders, however, the challenges that involve a SIEM on CyberDefenders are often more realistic, containing millions of logs and thousands of extracted fields. 
+[BTLO](https://blueteamlabs.online/) is another excellent choice, with challenges heavily focused on SOC operations and digital forensics. This platform is perfect for intermediate learners, and I highly recommend exploring their certification paths like the BTL1. In my opinion, BTLO offers more SIEM based challenges than CyberDefenders, however, the challenges that involve a SIEM on CyberDefenders are often more realistic, containing millions of logs and thousands of extracted fields. 
 
 <br>
 
