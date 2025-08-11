@@ -1,6 +1,6 @@
 # **Creating Timelines with Plaso and Log2Timeline**
 
-<img width="1427" height="375" alt="Image" src="https://github.com/user-attachments/assets/a77b3279-64b7-4f70-9beb-5e42167e039f" />
+<img width="1427" height="275" alt="Image" src="https://github.com/user-attachments/assets/a77b3279-64b7-4f70-9beb-5e42167e039f" />
 
 For context, a timeline contains a series of events ordered in chronological order, by their timestamp, typically in UTC time. For the most part, these timelines aggregate a variety of artifacts, normalise them so as to have the same time zone and formats, and saves it to a file. This is where Log2Timeline or Plaso comes into play. To put it simply, Log2Timeline, powered by the Plaso engine, is a tool used to extract timestamps and forensic artifacts from various sources, creating a comprehensive “super timeline”. It aggregates and normalises these artifacts, and can be run against:
 
