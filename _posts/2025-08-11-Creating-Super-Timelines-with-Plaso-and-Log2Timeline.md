@@ -51,14 +51,6 @@ sudo apt-get install plaso-tools
 
 ### **Getting Started**
 
-To execute Plaso and see the help menu, you can enter the following command:
-
-```bash
-log2timeline.py
-```
-
-<img width="940" height="116" alt="Image" src="https://github.com/user-attachments/assets/a71010c1-6013-46d7-a4d1-542f43f04923" />
-
 The kitchen-sink approach pulls every artifact Plaso can find:
 
 ```bash
