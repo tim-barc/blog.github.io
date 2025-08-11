@@ -125,8 +125,6 @@ Take for example a host that has been compromised with ransomware. If you identi
 <br>
 
 ### **Extra Resources**
-
-- [https://youtu.be/sAvyRwOmE10?si=W36kMifC1t6O-c29](Getting Started with Plaso and Log2Timeline by 13Cubed)
-- [https://medium.com/dfclub/how-to-use-log2timeline-54377e24872a](How to use log2timeline)
-- [https://www.youtube.com/watch?v=g9V6OUCe12k](Plaso and WSL 2 by 13Cubed)
-
+- [Getting Started with Plaso and Log2Timeline by 13Cubed](https://youtu.be/sAvyRwOmE10?si=W36kMifC1t6O-c29)
+- [How to use log2timeline](https://medium.com/dfclub/how-to-use-log2timeline-54377e24872a)
+- [Plaso and WSL 2 by 13Cubed](https://www.youtube.com/watch?v=g9V6OUCe12k)
