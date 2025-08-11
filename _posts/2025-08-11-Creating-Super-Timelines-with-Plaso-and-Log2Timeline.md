@@ -13,7 +13,7 @@ In this post, I will walk you through installing Plaso, creating a kitchen-sink 
 
 <br>
 
-### Table of Contents
+### **Table of Contents**
 - [Installation (Ubuntu)](#installation-ubuntu)
 - [Getting Started](#getting-started)
 - [Inspecting the Storage File](#inspecting-the-storage-file)
@@ -119,8 +119,8 @@ As you can see in the above image, Timeline Explorer colour codes these artifact
 
 A super timeline can feel overwhelming, containing potentially millions upon millions of lines. Instead of trying to review every event (which is borderline useless):
 
-- Target your search: Filter by file extension, keywords, or time ranges
-- Pivot from key events: e.g., suspicious file execution or web history. 
+- **Target your search:** Filter by file extension, keywords, or time ranges
+- **Pivot from key events:** e.g., suspicious file execution or web history. 
 
 Take for example a host that has been compromised with ransomware. If you identify the extension appended to encrypted files (let’s, say .ransomed), you can search for this within the super timeline to see when the files started being encrypted (i.e., you will find a bunch of NTFS events). You can then pivot off this to identify what occurred before and after the ransomware was deployed, this could enable you to identify the actual ransomware binary, and events that occurred prior to it being executed. 
 
