@@ -23,10 +23,10 @@ From my little research, MemProcFS lacks the popularly and respect that it deser
 MemProcFS installation is straightforward:
 
 - Navigate to the Releases section on the MemProcFS [GitHub](https://github.com/ufrisk/MemProcFS):  
-  <img width="940" height="536" alt="Image" src="https://github.com/user-attachments/assets/614ced22-2283-4caf-8190-117542c690e3" />
+  <img width="940" height="435" alt="Image" src="https://github.com/user-attachments/assets/614ced22-2283-4caf-8190-117542c690e3" />
 
 - Download and extract the compressed file suited for your operating system, in my case its Windows:  
-  <img width="940" height="535" alt="Image" src="https://github.com/user-attachments/assets/bcf5743b-e946-418e-a29c-1ca1dd88f6c4" />
+  <img width="940" height="435" alt="Image" src="https://github.com/user-attachments/assets/bcf5743b-e946-418e-a29c-1ca1dd88f6c4" />
 
 - Your MemProcFS binary is now ready for use.
 
