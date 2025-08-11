@@ -79,7 +79,7 @@ To extract the metadata associated with this file, you can use pinfo:
 pinfo.py <plaso_dump > 
 ```
 
-<img width="940" height="818" alt="Image" src="https://github.com/user-attachments/assets/c9aa1acb-b78e-479f-b759-8f7b1fd6ca85" />
+<img width="940" height="718" alt="Image" src="https://github.com/user-attachments/assets/c9aa1acb-b78e-479f-b759-8f7b1fd6ca85" />
 
 <br>
 
