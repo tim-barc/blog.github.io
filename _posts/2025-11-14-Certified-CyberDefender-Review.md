@@ -18,6 +18,7 @@ Ultimately, the CCD was an incredible journey. For anyone on the fence about the
 - [The Good, the Bad and the Ugly](#the-good-the-bad-and-the-ugly)
   - [Pros](#pros)
   - [Cons](#cons)
+- [Final Thoughts](#final-thoughts)
 
 <br>
 
