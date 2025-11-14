@@ -1,7 +1,8 @@
 # **Certified CyberDefender (CCD) Review and Experience**
 
-<img width="477" height="628" alt="image" src="https://github.com/user-attachments/assets/e54cb50d-2e73-4191-ba71-1f62db1f112e" />
-
+<div align="center">
+  <img width="477" height="628" alt="image" src="https://github.com/user-attachments/assets/e54cb50d-2e73-4191-ba71-1f62db1f112e" />
+</div>
 
 The Certified CyberDefender (CCD) is a hands-on self-paced certification that covers a variety of security domains, including network forensics, forensic evidence collection, disk forensics, memory forensics, threat hunting, security operations, incident response, perimeter defence, and malware analysis. Note, the exam only assesses network, disk, and memory forensics, along with threat hunting.
 
