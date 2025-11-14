@@ -41,21 +41,19 @@ According to community posts and my own opinion, the CCD is an intermediate to a
 
 ### **Exam**
 
-The entire training takes around 2–3 months if you allocate a couple of hours each day to studying, taking notes, and completing labs.
+The entire training takes around 2–3 months if you allocate a couple of hours each day to studying, taking notes, and completing labs. I highly recommend purchasing a one-month Pro subscription and doing additional labs before attempting the exam.
 
-I highly recommend purchasing a one-month Pro subscription and doing additional labs before attempting the exam.
-
-The exam is delivered entirely through the CyberDefenders platform. Once you start, you are given 48 hours to complete it.
-
-Key points:
+The exam is delivered entirely through the CyberDefenders platform. Once you start, you are given 48 hours to complete it. Key points:
 
 - Divided into 4 sections
 - All sections are accessible through the browser
 - Each question has an answer field and an optional justification field
 - Justification sections are useful for queries, reasoning, and evidence
 - The exam is fully practical, no multiple choice
+- The mimimum score to pass the certification is 70% 
+- If you complete all module investigations, you are given an extra 5% which gets added to your final mark if your result is below 70%
 
-I personally spent around 20 hours completing the exam, although realistically 12–15 hours would have been enough.
+I personally spent around 20 hours completing the exam, although realistically 12–15 hours would have been enough. If you pass, you receive a silver coin, anything over 85% yields a gold coin. 
 
 <br>
 
